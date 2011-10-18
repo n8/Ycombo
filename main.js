@@ -14,7 +14,9 @@
         });
       }, this));
     }
-    YCombo.prototype.start = function() {};
+    YCombo.prototype.start = function() {
+      return this.syncYCData();
+    };
     YCombo.prototype.syncYCData = function() {
       var url;
       url = "http://news.ycombinator.com/lists";

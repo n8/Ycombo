@@ -10,7 +10,7 @@ class YCombo
       chrome.tabs.create {'url':"http://news.ycombinator.com/submitted?id=#{@hacker_news_id}"}
 
   start: ->
-    # @syncYCData()
+    @syncYCData()
   
   syncYCData: ->
     url = "http://news.ycombinator.com/lists"
@@ -49,6 +49,6 @@ ycombo.start()
 setInterval(
   ->
     ycombo.syncYCData()
-  300 * 1000
+  300*1000
 )
 
