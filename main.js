@@ -14,12 +14,10 @@
         });
       }, this));
     }
-    YCombo.prototype.start = function() {
-      return this.syncYCData();
-    };
+    YCombo.prototype.start = function() {};
     YCombo.prototype.syncYCData = function() {
       var url;
-      url = "http://news.ycombinator.com";
+      url = "http://news.ycombinator.com/lists";
       return $.get(url, __bind(function(data) {
         var current_karma, date, day, name_section, pattern, returned, todays_karma, tops;
         returned = $(data);
@@ -54,5 +52,5 @@
   ycombo.start();
   setInterval(function() {
     return ycombo.syncYCData();
-  }, 600000);
+  }, 300 * 1000);
 }).call(this);

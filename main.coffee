@@ -8,13 +8,12 @@ class YCombo
     
     chrome.browserAction.onClicked.addListener (tab) => 
       chrome.tabs.create {'url':"http://news.ycombinator.com/submitted?id=#{@hacker_news_id}"}
-     
+
   start: ->
-    @syncYCData()
-  
+    # @syncYCData()
   
   syncYCData: ->
-    url = "http://news.ycombinator.com"
+    url = "http://news.ycombinator.com/lists"
     $.get url, (data) => 
       returned = $(data)
       tops = $(".pagetop", returned)
@@ -28,6 +27,7 @@ class YCombo
       
       # for testing
       # store.set 'todays_karma', {'karma': 0, 'stored_at': day}  
+      # store.remove 'todays_karma'
       
       todays_karma = store.get 'todays_karma'
       
@@ -49,6 +49,6 @@ ycombo.start()
 setInterval(
   ->
     ycombo.syncYCData()
-  600000
+  300 * 1000
 )
 
