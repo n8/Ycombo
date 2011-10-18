@@ -26,7 +26,7 @@ class YCombo
       day = date.getDay()
       
       # for testing
-      # store.set 'todays_karma', {'karma': current_karma, 'stored_at': day}  
+      # store.set 'todays_karma', {'karma': 0, 'stored_at': day}  
       
       todays_karma = store.get 'todays_karma'
       
