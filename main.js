@@ -54,5 +54,5 @@
   ycombo.start();
   setInterval(function() {
     return ycombo.syncYCData();
-  }, 30000);
+  }, 600000);
 }).call(this);

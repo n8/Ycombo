@@ -1,6 +1,6 @@
 {
   "name": "Hacker News notifications",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "I want to know my karma.",
 	"background_page": "bg.html",
   "browser_action": {

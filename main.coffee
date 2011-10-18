@@ -11,7 +11,8 @@ class YCombo
      
   start: ->
     @syncYCData()
-      
+  
+  
   syncYCData: ->
     url = "http://news.ycombinator.com"
     $.get url, (data) => 
@@ -48,6 +49,6 @@ ycombo.start()
 setInterval(
   ->
     ycombo.syncYCData()
-  30000
+  600000
 )
 
