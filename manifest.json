@@ -1,0 +1,14 @@
+{
+  "name": "Ycombo stuff",
+  "version": "1.0",
+  "description": "I want to know my karma.",
+	"background_page": "bg.html",
+  "browser_action": {
+    "default_icon": "favicon.ico"
+  },
+  "permissions": [
+    "http://news.ycombinator.com/",
+		"tabs", "http://*/*"
+  ], 
+	"icons": { "128": "icon128.png" }
+}
