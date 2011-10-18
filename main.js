@@ -30,7 +30,7 @@
         date = new Date;
         day = date.getDay();
         todays_karma = store.get('todays_karma');
-        if (todays_karma === null || todays_karma['stored_at'] !== day) {
+        if (todays_karma === void 0 || todays_karma['stored_at'] !== day) {
           store.set('todays_karma', {
             'karma': current_karma,
             'stored_at': day

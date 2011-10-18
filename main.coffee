@@ -30,7 +30,7 @@ class YCombo
       
       todays_karma = store.get 'todays_karma'
       
-      if todays_karma == null || todays_karma['stored_at'] != day
+      if todays_karma == undefined || todays_karma['stored_at'] != day
         store.set 'todays_karma' , {'karma': current_karma, 'stored_at': day}
       else 
         if todays_karma['stored_at'] == day 
